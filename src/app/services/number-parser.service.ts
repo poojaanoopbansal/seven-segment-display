@@ -23,8 +23,8 @@ export class NumberParserService {
     let lastTwoLines = 0;
     let count = 0;
     let tempInvoice ;
-    console.log("last data "+arrayOfData.length);
-    for(var invoice=0;invoice < arrayOfData.length; invoice++){
+    let removalOfLines =arrayOfData.length%4;
+    for(var invoice=0;invoice < arrayOfData.length-removalOfLines; invoice++){
      count = 0;
       
      firstLineCount = 1;

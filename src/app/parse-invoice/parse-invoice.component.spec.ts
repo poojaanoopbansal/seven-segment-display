@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ParseInvoiceComponent } from './parse-invoice.component';
+import { NumberParserService } from '../services/number-parser.service';
+
+class MockNumberParserService {
+  
+};
+
 
 describe('ParseInvoiceComponent', () => {
   let component: ParseInvoiceComponent;
@@ -8,15 +14,16 @@ describe('ParseInvoiceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ParseInvoiceComponent ]
+      declarations: [ ParseInvoiceComponent ],
+      providers: [
+        { provide: NumberParserService, useClass: MockNumberParserService }
+      ]
     })
-    .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ParseInvoiceComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
