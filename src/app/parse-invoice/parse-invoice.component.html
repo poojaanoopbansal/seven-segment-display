@@ -1,0 +1,21 @@
+<div class="center"><h2>Seven Segment Display Parser</h2></div>
+
+<div class="input-form">
+  <div>
+      <input type="file" name="fileUpload" id="fileUpload" (change)="onFileChange($event)">
+  </div>
+  <div class="submit-btn-wrapper">
+      <input type="submit" name="submit" (click)="onSubmit()">
+  </div>
+  
+</div>
+
+
+<div class="result-section" *ngIf="invoiceNumbers?.length">
+  <div><h3>Result</h3></div>
+  <div class="num-list-wrapper">
+    <div *ngFor="let invoiceNumber of invoiceNumbers" class="invoice-num">
+      {{invoiceNumber}}
+    </div>
+  </div>
+</div>
