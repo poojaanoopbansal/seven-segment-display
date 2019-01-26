@@ -103,9 +103,9 @@ export class NumberParserService {
         break;
         case "000000000":
         break;
-       default:
+    /*   default:
         invoiceNumber = invoiceNumber +"?";
-        break;
+        break;*/
       }
       if(i%9 === 8){
         arrayOfInvoiceNumber.push(invoiceNumber);
